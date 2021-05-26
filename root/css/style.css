@@ -57,12 +57,15 @@ a {
 .hamburger-icon {
   display: inline-block;
   cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
 }
 
 .bar {
   width: 28px;
   height: 3px;
-  background-color: black;
+  background-color: white;
   margin: 8px 0;
   transition: transform 0.4s;
 }
@@ -77,4 +80,106 @@ a {
 
 .collapsible--open .bar3 {
   transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Nav Bar */
+.nav-bar {
+  background-color: black;
+  display: flex;
+  height: 6rem;
+  align-items: center;
+  padding: 2rem;
+  transition: 0.4s;
+}
+
+.nav-item {
+  display: none;
+}
+
+.nav-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.collapsible--open .nav-title {
+  display: none;
+}
+
+.collapsible--open {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 6rem;
+}
+
+.collapsible--open .nav-title {
+  display: none;
+}
+
+.collapsible--open .nav-item {
+  display: flex;
+  padding: 1rem;
+  list-style: none;
+  transition: color 0.4s;
+}
+
+.collapsible--open .nav-item:hover a {
+  color: var(--color-accent);
+}
+
+@media screen and (min-width: 600px) {
+  .nav-bar {
+    justify-content: space-between;
+  }
+
+  .nav-items {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    height: 6rem;
+  }
+
+  .nav-item {
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .give {
+    border-top: 5px solid var(--color-accent);
+    position: relative;
+    transition: ease-out 0.4s;
+    overflow: hidden;
+  }
+
+  .give:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-accent);
+    position: absolute;
+    transition: top 0.3s ease;
+    top: -6rem;
+    left: 0;
+  }
+
+  .give a {
+    z-index: 1;
+  }
+
+  .give:hover:before {
+    top: 0;
+  }
+
+  .give:hover a {
+    color: var(--color-primary);
+  }
 }

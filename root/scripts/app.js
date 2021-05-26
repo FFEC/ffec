@@ -1,7 +1,5 @@
+function toggleMenu(x) {
+    x.classList.toggle('collapsible--open');
+    document.querySelector('.nav-bar').classList.toggle('collapsible--open');
+}
 
-const collapsibles = document.querySelectorAll(".collapsible");
-collapsibles.forEach((item) =>
-  item.addEventListener("click", function () {
-    this.classList.toggle("collapsible--open");
-  })
-);
