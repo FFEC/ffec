@@ -29,7 +29,7 @@ h3 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -51,6 +51,12 @@ a {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   color: var(--color-secondary);
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 
 /* Hamburger Icon */
@@ -90,6 +96,8 @@ a {
   align-items: center;
   padding: 2rem;
   transition: 0.4s;
+  position: fixed;
+  width: 100%;
 }
 
 .nav-item {
@@ -113,7 +121,7 @@ a {
 }
 
 .collapsible--open .nav-title {
-  display: none;
+  opacity: 0;
 }
 
 .collapsible--open .nav-item {
@@ -121,13 +129,24 @@ a {
   padding: 1rem;
   list-style: none;
   transition: color 0.4s;
+  overflow: visible;
 }
 
 .collapsible--open .nav-item:hover a {
-  color: var(--color-accent);
+  border-bottom: 0.5rem solid var(--color-accent);
 }
 
 @media screen and (min-width: 600px) {
+  .collapsible--open {
+    height: 6rem;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .collapsible--open .nav-title {
+    opacity: 1;
+  }
+
   .nav-bar {
     justify-content: space-between;
   }
@@ -181,5 +200,30 @@ a {
 
   .give:hover a {
     color: var(--color-primary);
+  }
+}
+
+/* Hero Shot */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/images/boy-smiling-smaller.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  margin: 5%;
+  color: white;
+  max-width: 600px;
+}
+
+@media screen and (min-width: 600px) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../assets/images/boy-smiling.jpg");
   }
 }
