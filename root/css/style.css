@@ -242,8 +242,8 @@ a {
 
 /* Give Section */
 .give {
-  padding: 6rem 4rem;
   color: white;
+  padding: 6rem 4rem;
 }
 
 .give-title {
@@ -252,7 +252,7 @@ a {
 
 /* Our Work Section */
 .our-work-section {
-  background-color: white;
+  color: white;
 }
 
 .our-work {
@@ -304,7 +304,13 @@ a {
 
 /* Cards */
 .cards {
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cards .container {
   display: grid;
+  padding: 4rem;
 }
 
 .card {
@@ -329,19 +335,12 @@ a {
 }
 
 @media screen and (min-width: 700px) {
-  .cards {
+  .cards .container {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    margin: 4rem;
   }
 
   .card {
     margin: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .cards {
-    margin: auto;
   }
 }
