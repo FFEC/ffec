@@ -19,12 +19,13 @@ html {
 
 body {
   font-family: "PT Serif", serif;
-  color: var(--color-primary);
+  background-color: var(--color-primary);
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Poppins", sans-serif;
 }
 
@@ -33,18 +34,18 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-
-h3 {
   font-size: 2rem;
   font-weight: 400;
   font-style: italic;
 }
 
+h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
 p {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
 }
 
 a {
@@ -59,11 +60,16 @@ a {
   }
 }
 
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 /* Hamburger Icon */
 .hamburger-icon {
   display: inline-block;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 2rem;
 }
@@ -107,6 +113,7 @@ a {
 .nav-title {
   font-size: 2rem;
   text-transform: uppercase;
+  visibility: hidden;
 }
 
 .collapsible--open .nav-title {
@@ -147,6 +154,10 @@ a {
     opacity: 1;
   }
 
+  .nav-title {
+    visibility: visible;
+  }
+
   .nav-bar {
     justify-content: space-between;
   }
@@ -172,14 +183,14 @@ a {
     display: none;
   }
 
-  .give {
+  .nav-item--give {
     border-top: 5px solid var(--color-accent);
     position: relative;
     transition: ease-out 0.4s;
     overflow: hidden;
   }
 
-  .give:before {
+  .nav-item--give:before {
     content: "";
     width: 100%;
     height: 100%;
@@ -190,15 +201,15 @@ a {
     left: 0;
   }
 
-  .give a {
+  .nav-item--give a {
     z-index: 1;
   }
 
-  .give:hover:before {
+  .nav-item--give:hover:before {
     top: 0;
   }
 
-  .give:hover a {
+  .nav-item--give:hover a {
     color: var(--color-primary);
   }
 }
@@ -216,14 +227,121 @@ a {
 }
 
 .hero-title {
-  margin: 5%;
-  color: white;
+  margin: 6%;
   max-width: 600px;
+  line-height: 4rem;
+  color: white;
 }
 
 @media screen and (min-width: 600px) {
   .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../assets/images/boy-smiling.jpg");
+  }
+}
+
+/* Give Section */
+.give {
+  padding: 6rem 4rem;
+  color: white;
+}
+
+.give-title {
+  padding-bottom: 1.5rem;
+}
+
+/* Our Work Section */
+.our-work-section {
+  background-color: white;
+}
+
+.our-work {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+}
+
+.our-work div {
+  padding: 0 2rem;
+}
+
+.our-work h2 {
+  margin: 1.5rem 0;
+}
+
+.our-work p {
+  margin: 1.5rem 0;
+}
+
+.highlight {
+  color: var(--color-accent);
+  font-style: bold;
+}
+
+.line {
+  margin-bottom: 1.5rem;
+  height: 1px;
+  width: 64px;
+  display: block;
+  border-bottom: 2px solid var(--color-accent);
+  padding-top: 2.2rem;
+}
+
+.highlight--2 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  .our-work {
+    flex-direction: row;
+  }
+
+  .our-work--header {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Cards */
+.cards {
+  display: grid;
+}
+
+.card {
+  margin: 4rem auto;
+  max-width: 700px;
+  background-color: white;
+}
+
+.card-photo {
+  width: 100%;
+  max-height: 25rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.card-text {
+  padding: 3rem 2.4rem 2rem 2.4rem;
+}
+
+.card-text--heading {
+  padding-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin: 4rem;
+  }
+
+  .card {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards {
+    margin: auto;
   }
 }
