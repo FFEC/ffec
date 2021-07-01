@@ -344,3 +344,28 @@ a {
     margin: 0;
   }
 }
+
+/* Button */
+.btn {
+  border: 2px solid var(--color-accent);
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  padding: 1.4rem 6rem;
+  margin-top: 2rem;
+  width: 40%;
+  transition: 0.3s;
+}
+
+.btn a {
+  color: var(--color-accent);
+  transition: 0.3s;
+}
+
+.btn:hover a {
+  color: var(--color-primary);
+}
+
+.btn:hover {
+  background-color: var(--color-accent);
+  cursor: pointer;
+}
