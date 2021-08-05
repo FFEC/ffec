@@ -187,7 +187,7 @@ a {
     border-top: 5px solid var(--color-accent);
     position: relative;
     transition: ease-out 0.4s;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .nav-item--give:before {
@@ -226,6 +226,12 @@ a {
   align-items: center;
 }
 
+#give-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  url("../assets/images/donations.jpg");;
+
+}
+
 .hero-title {
   margin: 6%;
   max-width: 600px;
@@ -251,7 +257,8 @@ a {
 }
 
 /* Our Work Section */
-.our-work-section {
+.our-work-section, 
+.accepted-donations {
   color: white;
 }
 
@@ -437,3 +444,48 @@ footer .container {
     text-align: right;
   }
 }
+
+/* GIVE PAGE */
+.give-page{
+  color: white;
+  padding: 2rem 4rem;
+}
+
+.donation-img {
+  width: 100%;
+}
+
+.donations {
+  padding: 2rem 0;
+}
+
+.donation-list {
+  font-size: 1.9rem;
+  padding: 2rem 5rem;
+}
+
+.donations a {
+  font-family: "PT Serif", serif;
+  color: var(--color-accent);
+}
+
+@media screen and (min-width: 900px) {
+  .accepted-donations {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .donation-img {
+    flex-basis: 1;
+    flex-shrink: 0;
+  }
+
+  .donations {
+    flex-basis: 50%;
+    flex-shrink: 0;
+  }
+
+}
+
