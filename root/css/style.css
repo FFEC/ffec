@@ -104,6 +104,7 @@ a {
   transition: 0.4s;
   position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 
 .nav-item {
@@ -228,8 +229,12 @@ a {
 
 #give-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-  url("../assets/images/donations.jpg");;
+  url("../assets/images/donations.jpg");
+}
 
+#contact-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  url("../assets/images/contact.jpg");
 }
 
 .hero-title {
@@ -324,6 +329,11 @@ a {
   margin: 4rem auto;
   max-width: 700px;
   background-color: white;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card-photo {
@@ -451,8 +461,13 @@ footer .container {
   padding: 2rem 4rem;
 }
 
+.make-difference {
+  padding-top: 6rem;
+}
+
 .donation-img {
   width: 100%;
+  padding: 3rem 0rem;
 }
 
 .donations {
@@ -466,10 +481,15 @@ footer .container {
 
 .donations a {
   font-family: "PT Serif", serif;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.donations a:hover {
   color: var(--color-accent);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .accepted-donations {
     display: flex;
     flex-direction: row-reverse;
@@ -489,3 +509,23 @@ footer .container {
 
 }
 
+/* CONTACT PAGE */
+.contact-us {
+  color: white;
+  padding: 6rem 4rem;
+}
+
+.contact p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* LEGAL PAGE */
+.legal {
+  color: white;
+  padding: 12rem 4rem 6rem 4rem;
+}
+
+.legal a {
+  font-family: "PT Serif", serif;
+  text-decoration: underline;
+}
