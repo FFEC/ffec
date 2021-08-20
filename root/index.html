@@ -44,6 +44,46 @@
           family violence, and illiteracy. Together, <span class="highlight">we can change that.</span>
         </h3>
         <span class="line"></span>
+        
+        <div class="donation-form-section">
+          <h4>Choose an amount to give.</h4>
+        <form class="donation_form">
+          <div class = "donation-amount">
+            <input type="radio" id="250" name="donation_amount" value="250" checked >
+            <label for="250">$250</label><br>
+          </div>
+          <div class = "donation-amount">
+            <input type="radio" id="100" name="donation_amount" value="100">
+            <label for="100">$100</label><br>     
+          </div>
+          <div class = "donation-amount">     
+            <input type="radio" id="50" name="donation_amount" value="50">
+            <label for="50">$50</label><br>
+          </div>
+          <div class = "donation-amount">
+            <input type="radio" id="25" name="donation_amount" value="25">
+            <label for="25">$25</label><br>
+          </div>
+          <div class = "donation-amount">
+            <input class="other-amount-input" type="radio" id="other_amount" name="donation_amount" value="other-amount" placeholder="Other">
+            <label for="other_amount">Other Amount</label>
+          </div>
+          <div class="other-donation-amount">
+            $
+            <input type = "number" id="other_donation_amount" min="0">
+          </div>
+        </form>
+
+        <!-- TODO: add dynamic ability to update value of amount to give -->
+
+
+        <button class="btn donateButton">
+          <a class="donate-button-link" href="https://www.paypal.com/donate?business=ffec17%40gmail.com&amount=20&no_recurring=0&item_name=Building+strong+foundations+for+self-sufficient+families.&currency_code=USD">Donate</a>
+        </button>
+
+
+
+
       </div>
     </section>
     <section class="our-work-section">
@@ -187,6 +227,8 @@
         <button class="btn">
           <a href="give.html">Give</a>
         </button>
+        <br>
+
       </div>
     </section>
     <footer>
