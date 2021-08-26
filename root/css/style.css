@@ -531,10 +531,8 @@ footer .container {
 }
 
 /* DONATION FORM */
-.donation-form-section h4 {
-  font-size: 1.6rem;
+.donation-form-section h3 {
   padding: 2rem 0;
-  font-weight: 400;
 }
 
 .donation_form input[type="radio"] {
@@ -573,7 +571,7 @@ footer .container {
   font-family: "Poppins", sans-serif;
   justify-content: space-between;
   text-align: center;
-  width: 20rem;
+  width: 100%;
   padding: 0 4em;
 }
 
@@ -600,4 +598,58 @@ input[type="number"] {
 
 input[type="button"] {
   width: 100%;
+}
+
+.donation-image {
+  grid-area: image;
+}
+
+.donation-form-section {
+  grid-area: donations;
+  padding-right: 40px;
+}
+
+.give-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "donations image";
+  align-items: center;
+}
+
+.donation-image img {
+  width: 100%;
+}
+
+.donation_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". other other";
+  gap: 20px;
+}
+
+.donation-amount label,
+.other-donation-amount-open {
+  width: 100%;
+  text-align: center;
+}
+
+.other-amount-div,
+.other-donation-amount {
+  grid-area: other;
+}
+
+.donate-button {
+  width: 100%;
+}
+
+@media screen and (max-width: 924px) {
+  .donation-image {
+    display: none;
+  }
+
+  .give-section {
+    grid-template-columns: 1fr;
+  }
 }
