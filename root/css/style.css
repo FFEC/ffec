@@ -112,6 +112,10 @@ a {
   display: none;
 }
 
+.nav-item--give {
+  cursor: pointer;
+}
+
 .nav-title {
   font-size: 2rem;
   text-transform: uppercase;
@@ -568,21 +572,23 @@ footer .container {
   font-size: 1.6rem;
   display: flex;
   align-items: center;
-  font-family: "Poppins", sans-serif;
   justify-content: space-between;
+  font-family: "Poppins", sans-serif;
   text-align: center;
-  width: 100%;
   padding: 0 4em;
 }
 
 input[type="number"] {
-  padding-left: 1rem;
-  width: 80%;
+  width: 60px;
   border: none;
   background-color: var(--color-accent);
   font-family: "Poppins", sans-serif;
   outline: none;
   padding: 1.4rem 0;
+}
+
+.other-donation-amount-open p {
+  font-size: 1.2rem;
 }
 
 /* remove arrows on number input box */

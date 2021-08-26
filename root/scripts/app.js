@@ -49,6 +49,7 @@ function updateDonationLink() {
     }
     let link = "https://www.paypal.com/donate?business=ffec17%40gmail.com&amount=" + donationAmount +"&no_recurring=0&item_name=Building+strong+foundations+for+self-sufficient+families.&currency_code=USD"
     document.querySelector(".donate-button-link").href = link;
+    document.querySelector(".donate-button").setAttribute("onclick", "window.open('" + link + "' ,'_blank')");
 }
 
 document.querySelectorAll("input[name=donation_amount]").forEach(button => button.addEventListener("click", updateDonationLink));

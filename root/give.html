@@ -20,7 +20,7 @@
         <a href="index.html" class="nav-title">Faith Family Empowerment Center</a>
         <ul class="nav-items">
           <li class="nav-item nav-item--contact"><a href="contact.html">Contact</a></li>
-          <li class="nav-item nav-item--give"><a href="give.html">Give</a></li>
+          <li class="nav-item nav-item--give" onclick="location.href='give.html'"><a href="give.html">Give</a></li>
         </ul>
       </div>
       <div class="hamburger-icon" onclick="toggleMenu(this)">
@@ -46,6 +46,47 @@
         </h3>
         <span class="line"></span>
     </div>
+    
+
+    <div class="give-section">
+      <div class="donation-form-section">
+        <h3>Choose an amount to give.</h4>
+        <form class="donation_form">
+          <div class = "donation-amount">
+            <input type="radio" id="250" name="donation_amount" value="250" checked >
+            <label for="250">$250</label><br>
+          </div>
+          <div class = "donation-amount">
+            <input type="radio" id="100" name="donation_amount" value="100">
+            <label for="100">$100</label><br>     
+          </div>
+          <div class = "donation-amount">     
+            <input type="radio" id="50" name="donation_amount" value="50">
+            <label for="50">$50</label><br>
+          </div>
+          <div class = "donation-amount">
+            <input type="radio" id="25" name="donation_amount" value="25">
+            <label for="25">$25</label><br>
+          </div>
+          <div class = "donation-amount other-amount-div">
+            <input class="other-amount-input" type="radio" id="other_amount" name="donation_amount" value="other-amount" placeholder="Other">
+            <label for="other_amount">Other Amount</label>
+          </div>
+          <div class="donation-amount other-donation-amount">
+            $
+            <input type = "number" id="other_donation_amount" min="0" name="other_donation_amount">
+            <p>USD</p>
+          </div>
+        </form>
+        <button class="btn donate-button" onclick="window.open('https://www.paypal.com/donate?business=ffec17%40gmail.com&amount=20&no_recurring=0&item_name=Building+strong+foundations+for+self-sufficient+families.&currency_code=USD','_blank')">
+          <a class="donate-button-link" target="_blank" href="https://www.paypal.com/donate?business=ffec17%40gmail.com&amount=20&no_recurring=0&item_name=Building+strong+foundations+for+self-sufficient+families.&currency_code=USD">Donate</a>
+        </button>
+    </div>
+  <div class="donation-image">
+    <img src="assets/images/mother-and-sons-cooking.jpg" alt="">
+  </div>
+</div>
+
     </section>
    
 
@@ -80,7 +121,7 @@
           </h3>
           <div class = "donations">
           <p> To work with us, you must complete a criminal and CPS background check, a two hour online training, and have a recent negative TB test.
-              To learn more about how you can get involved, <a href="">contact us.</a></p>
+              To learn more about how you can get involved, <a href="contact.html">contact us.</a></p>
         </div>
     </div>
     </section>
@@ -96,13 +137,13 @@
           <a href="legal.html" class="link">Legal</a>
         </div>
         <div class="social column">
-          <a href="https://www.facebook.com/FFEC17"><img src="./root/assets/images/facebook-icon.png" alt="" class="social-icon"></a>
-          <a href="https://www.instagram.com/ffec17/?hl=en"><img src="./root/assets/images/instagram-icon.png" alt="" class ="social-icon"></a>
+          <a target="_blank" href="https://www.facebook.com/FFEC17"><img src="./root/assets/images/facebook-icon.png" alt="" class="social-icon"></a>
+          <a target="_blank" href="https://www.instagram.com/ffec17/?hl=en"><img src="./root/assets/images/instagram-icon.png" alt="" class ="social-icon"></a>
         </div>
       </div>
     <p class="copyright">© 2021 | Faith Family Empowerment Center | P.O. Box 382142 Duncanville 75137</p>
     </section>
     </footer>
-    <script src="./root/scripts/app.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
